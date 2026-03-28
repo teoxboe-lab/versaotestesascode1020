@@ -1,16 +1,6 @@
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --cream: #fffbeb;
-}
-
-body {
-  background-color: var(--cream);
-}
 
 @layer components {
   .btn-brutal {
@@ -30,11 +20,14 @@ body {
   }
 }
 
-@layer base {
-  .theme {
-    --font-heading: var(--font-sans);
-    --font-sans: var(--font-sans);
+@layer utilities {
+  .border-border {
+    border-color: #000; /* define a cor usada globalmente */
   }
+  .outline-ring {
+    outline: 2px solid rgba(0,0,0,0.5);
+  }
+}
   :root {
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -103,12 +96,11 @@ body {
     --sidebar-ring: oklch(0.556 0 0);
   }
   * {
-    @apply border-border outline-ring/50;
-  }
+  @apply border border-gray-200 outline-none;
+}
   body {
-    @apply bg-background text-foreground;
+   @apply bg-background text-foreground;
   }
   html {
     @apply font-sans;
   }
-}
