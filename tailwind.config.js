@@ -1,33 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // 1. Diga ao Tailwind onde procurar suas classes
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        // 2. Mapeie as variáveis do seu globals.css
+        // Cores do Sistema (Variáveis do globals.css)
         background: "var(--background)",
         foreground: "var(--foreground)",
         
-        // Suas cores personalizadas
-        cream: '#FFFBEB',
-        'brand-yellow': '#FACC15',
-        'brand-red': '#BE123C',
-        'brand-green': '#064E3B',
-        border: '#E5E7EB',
+        // Suas Cores de Marca (Estilo Brutalista)
+        'brand-yellow': '#FACC15', // O amarelo vibrante
+        'brand-black': '#000000',
+        'cream': '#FFFBEB',
+        'border': '#000000', // Bordas sempre pretas
       },
+      // Suas fontes personalizadas
       fontFamily: {
         impact: ['Impact', 'Arial Narrow', 'sans-serif'],
       },
+      // Sua sombra "bloco" característica
       boxShadow: {
-        brutal: '4px 4px 0px 0px #000000',
-        'brutal-lg': '6px 6px 0px 0px #000000',
-        'brutal-xl': '8px 8px 0px 0px #000000',
+        'brutal': '4px 4px 0px 0px #000000',
+        'brutal-lg': '8px 8px 0px 0px #000000',
       },
     },
   },
